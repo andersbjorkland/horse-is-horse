@@ -22,7 +22,15 @@ export const GlobalStyle = createGlobalStyle`
         
         
         // Dimensions
+        
+        --container-height: 18rem;
         --image-height: 12rem;
+        --picker-item-width: 5rem;
+        --picker-item-height: 5rem;
+        --picker-item-gap: 1rem;
+        
+        // Timing
+        --picker-animation-duration: ${props => props.timing}ms;
         
     }
 

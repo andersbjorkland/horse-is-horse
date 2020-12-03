@@ -2,8 +2,9 @@ import React from 'react';
 
 import shadow01 from '../../assets/images/shadow_01.png';
 import GameImage from "../GameImage";
-import {Wrapper} from "./Content.styles";
+import {Container, Wrapper} from "./Content.styles";
 import TextOverlay from "../TextOverlay";
+import Picker from "../Picker";
 
 
 class Content extends React.Component {
@@ -25,23 +26,25 @@ class Content extends React.Component {
 
     clickHandler() {
         if (!this.state.update) {
-            console.log("CLICK!");
 
             let index = this.state.textIndex + 1;
             if (index >= this.state.texts.length) {
                 index = 0;
             }
             this.setState({ animate: "animate", update: true, textIndex: index });
-            setTimeout(() => this.setState({animate: "standard", update: false}), 1500);
+            setTimeout(() => this.setState({animate: "standard", update: false}), this.props.timing);
         }
     }
 
     render() {
         return (
-          <Wrapper onClick={this.clickHandler}>
-              <GameImage className={this.state.animate} image={shadow01} />
-              <TextOverlay className={this.state.animate} updateText={this.state.texts[this.state.textIndex]}/>
-          </Wrapper>
+            <Wrapper>
+                <Container onClick={this.clickHandler}>
+                  <GameImage className={this.state.animate} image={shadow01} />
+                  <TextOverlay className={this.state.animate} updateText={this.state.texts[this.state.textIndex]}/>
+                </Container>
+                <Picker timing={this.props.timing} itemHandler={this.clickHandler}/>
+            </Wrapper>
         );
     }
 }
