@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  //height: 100%;
   width: 100%;
   padding-top: 2rem;
   display: flex;
@@ -44,7 +43,6 @@ export const Image = styled.img`
   
   &.standard {
     transform-origin: 100% 80%;
-    width: 60vw;
     transform: rotate(720deg);    
   }
   
@@ -55,17 +53,14 @@ export const Image = styled.img`
     @keyframes rear {
     0% {
       transform-origin: 100% 80%;
-      width: 60vw;
       transform: rotate(720deg);    
     }
     30% {
       transform-origin: 100% 80%;
-      width: 60vw;
       transform: rotate(750deg); 
     }
     100% {
       transform-origin: 100% 80%;
-      width: 60vw;
       transform: rotate(720deg);    
     }
   }

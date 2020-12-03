@@ -10,7 +10,7 @@ export const Content = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 1rem;
 
     .shadow {
         z-index: 1;

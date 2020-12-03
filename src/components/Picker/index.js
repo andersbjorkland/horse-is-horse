@@ -8,17 +8,17 @@ class Picker extends React.Component {
         super(props);
 
         const items = [
-            <PickerItem key={"pi1-" + new Date().getMilliseconds()} content={"ONE"} />,
-            <PickerItem key={"pi2-" + new Date().getMilliseconds()} content={"TWO"} />,
-            <PickerItem key={"pi3-" + new Date().getMilliseconds()}  content={"THREE"} />,
-            <PickerItem key={"pi4-" + new Date().getMilliseconds()} content={"FOUR"} />,
-            <PickerItem key={"pi5-" + new Date().getMilliseconds()}  content={"FIVE"} />,
-            <PickerItem key={"pi6-" + new Date().getMilliseconds()}  content={"SIX"} />,
+            <PickerItem key={"pi1-" + new Date().getMilliseconds()} content={"Sause"} itemHandler={() => this.props.itemHandler(false)} />,
+            <PickerItem key={"pi2-" + new Date().getMilliseconds()} content={"Ham"} itemHandler={() => this.props.itemHandler(false)} />,
+            <PickerItem key={"pi3-" + new Date().getMilliseconds()}  content={"Glass"} itemHandler={() => this.props.itemHandler(false)} />,
+            <PickerItem key={"pi4-" + new Date().getMilliseconds()} content={"Flour"} itemHandler={() => this.props.itemHandler(false)} />,
+            <PickerItem key={"pi5-" + new Date().getMilliseconds()}  content={"Milk"} itemHandler={() => this.props.itemHandler(false)} />,
+            <PickerItem key={"pi6-" + new Date().getMilliseconds()}  content={"Bond"} itemHandler={() => this.props.itemHandler(false)}/>,
             <PickerItem
                 key={"pi7-" + new Date().getMilliseconds()}
-                content={"YES!"}
+                content={"Yes!"}
                 className="bold"
-                itemHandler={this.props.itemHandler}
+                itemHandler={() => this.props.itemHandler(true)}
             />
         ,]
 

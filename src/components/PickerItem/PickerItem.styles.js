@@ -88,4 +88,6 @@ export const Container = styled.div`
   background-color: var(--blue);
   font-size: 1.5rem;
 
+  cursor: pointer;
+
 `;
